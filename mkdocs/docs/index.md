@@ -16,3 +16,7 @@ For more details see
 
 - [In-Depth for users](in-depth-users.md)
 - [In-Depth for developers](in-depth-developers.md)
+
+## Support
+
+This project is kindly supported by the [DeGrants Program](https://github.com/stacksgov/decentralized-grants/issues/7).
