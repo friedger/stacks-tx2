@@ -50,7 +50,15 @@
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../bns-v2/">Remove bad BNS-v2 name</a>
+                <li class="toctree-l1"><a class="reference internal" href="../in-depth-developers/">In-Depth: Sponsored Transactions for Developers</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../in-depth-users/">In-Depth: Sponsored Transactions for Users</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../minting-nfts/">Minting NFTs</a>
                 </li>
               </ul>
               <ul>
@@ -81,12 +89,15 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="block-hacked-account">Block hacked account</h1>
+<p>Sponsored transactions have been seen in the wild to block a hacked account from doing any further transactions. This is possible due to the dependency between user and sponsor.</p>
+<p>When a third party has access to the private key of the user's account, the user can try to block their own account. The user can initiate a sponsored transaction and the sponsoring account can set a nonce for the sponsor with a gap. This prevents that the transaction is confirmed by the network. The user account cannot send any transactions anymore.</p>
+<p>The third party could try to replace the transaction by higher fees. However, the sponsor can do the same. The difference is that the sponsor can get back their fees when the transaction in mempool expires after around 2 days.</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
         <a href=".." class="btn btn-neutral float-left" title="Sponsored Stacks transactions"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../bns-v2/" class="btn btn-neutral float-right" title="Remove bad BNS-v2 name">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../in-depth-developers/" class="btn btn-neutral float-right" title="In-Depth: Sponsored Transactions for Developers">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -112,7 +123,7 @@
       <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../bns-v2/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../in-depth-developers/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
