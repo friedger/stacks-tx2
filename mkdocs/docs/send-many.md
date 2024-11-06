@@ -19,5 +19,6 @@ The following criteria are implemented for eligable sponsoring:
 - must be a sponsored transaction
 - must be a send-many transaction for $NOT
 - must contain the sponsor address as recipient
+- must send at least 1k $NOT to the sponsor
 
 The source code is available at [github.com/friedger/stacks-not-sponsoring](https://github.com/friedger/stacks-not-sponsoring/blob/main/src/lib/stacks.ts#L101).
