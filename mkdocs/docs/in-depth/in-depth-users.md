@@ -8,7 +8,7 @@ Practically, the user visits an website (or dapp), connects the Stacks wallet an
 
 Leather web extension (version v6.51.1) show 0 STX fees and an information text like this:
 
-![Sponsored transaction](img/sponsored-tx-in-wallet.png)
+![Sponsored transaction](../img/sponsored-tx-in-wallet.png)
 
 The wallet sends the signed transaction back to the website. The signed transaction can now be forwarded to a signing service or an other user who sponsors the transaction. Currently, no Stacks wallet supports signing transactions as a sponsor. Instead, the developers of the website needs to take care of it.
 
@@ -16,4 +16,4 @@ The wallet sends the signed transaction back to the website. The signed transact
 
 On one hand, sponsored transactions simplify the interaction with websites or apps that do not require the use of STX directly. Furthermore, users do not have to evaluate the current fee market and decide on the fees.
 
-On the other hand, sponsored transactions create a dependency between user and sponsor. If the sponsor fails to sign and broadcast the transaction correctly, the user's transaction is not confirmed until the sponsor resolves the issue. A bad acting sponsor can even block the user's wallet. See [Block Hacked Accounts](block.md).
+On the other hand, sponsored transactions create a dependency between user and sponsor. If the sponsor fails to sign and broadcast the transaction correctly, the user's transaction is not confirmed until the sponsor resolves the issue. A bad acting sponsor can even block the user's wallet. See [Block Hacked Accounts](../use-cases/block.md).

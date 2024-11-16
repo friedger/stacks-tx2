@@ -1,2 +1,15 @@
 site_name: TX2 docs
 theme: readthedocs
+nav:
+  - index.md
+  - In-Depth:
+      - in-depth/in-depth-users.md
+      - in-depth/in-depth-developers.md
+  - Use Cases:
+      - use-cases/send-many.md
+      - use-cases/minting-nfts.md
+      - use-cases/transferring-nfts.md
+      - use-cases/block.md
+  - Vision:
+      - vision/sbtc.md
+      - vision/transaction-bundles.md

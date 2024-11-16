@@ -51,3 +51,60 @@ const sponsoredTx = await sponsorTransaction({
 
 const result = await broadcastTransaction(sponsoredTx);
 ```
+
+## Webservices for Sponsoring Transactions
+
+As mentioned above the transaction signing by sponsor usually happens on a server that holds the private key of the sponsor. There are two open source projects that implemented such a webservice that provide both the same API:
+
+- [Tx2 service](https://github.com/friedger/stacks-not-sponsoring/): basic service that allows to sponsor send-many calls for $NOTHING, uses single sponsoring address.
+- [Xverse service](https://github.com/secretkeylabs/stacks-transaction-sponsor/): advanced service that allows to sponsor nft transfers, uses a randomly selected address from a list of sponsoring addresses.
+
+### API Reference
+
+#### sponsor
+
+`/v1/sponsor` (POST)
+
+The request body contains the user signed transaction as json property `tx`. The transaction must be created as a sponsored transaction. The service will sign the transaction as the sponsor and broadcast it.
+
+##### Example
+
+Request:
+
+```
+curl -X POST http://localhost:3000/v1/sponsor \
+ -H "Content-Type: application/json" \
+ -d '{"tx": "feedc00d1...user-signed-transaction-hex"}'
+```
+
+Result:
+
+```json
+{
+  "txid": "c001c0de...tx-id",
+  "rawTx": "feedc00d2...sponsored-transaction-hex"
+}
+```
+
+#### info
+
+`/v1/info` (GET)
+
+The request returns information about the service in JSON. The result is a list of addresses used by the service for sponsoring transactions.
+
+For tx2, the result contains also the minimum fees for NOT sponsoring and the balance of the sponsor.
+
+##### Example
+
+```
+curl -X GET http://localhost:3000/v1/info'
+```
+
+Result:
+
+```json
+{
+  "active": "true",
+  "sponsor_addresses": ["SP1234...", "SP5678..."]
+}
+```

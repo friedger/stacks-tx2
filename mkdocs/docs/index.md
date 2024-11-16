@@ -6,16 +6,24 @@ Transactions can be either signed by the user as a standard transaction or as a 
 
 The sponsored transactions are used for the following use cases:
 
-- [Send $NOT to many users](send-many.md)
-- [Block hacked user account](block.md)
-- [Minting NFTs](minting-nfts.md)
+- [Send $NOT to many users](use-cases/send-many.md)
+- [Minting NFTs](use-cases/minting-nfts.md)
+- [Transferring NFTs](use-cases/transferring-nfts.md)
+- [Block hacked user account](use-cases/block.md)
 
 ## In-Depth
 
-For more details see
+For more details, see
 
-- [In-Depth for users](in-depth-users.md)
-- [In-Depth for developers](in-depth-developers.md)
+- [In-Depth for users](in-depth/in-depth-users.md)
+- [In-Depth for developers](in-depth/in-depth-developers.md)
+
+## Vision
+
+There are ideas how to improve and extend sponsored transaction, see
+
+- [Paying in BTC or sBTC](vision/sbtc.md)
+- [Transaction Bundles](vision/transaction-bundles.md)
 
 ## Support
 

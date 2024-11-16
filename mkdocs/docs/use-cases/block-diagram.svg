@@ -1,0 +1,81 @@
+<svg width="900" height="500"
+    xmlns="http://www.w3.org/2000/svg">
+    <style>
+      .title { font: bold 14px sans-serif; }
+      .label { font: 12px sans-serif; }
+      .small { font: 11px sans-serif; }
+      .timeline { stroke: #ccc; stroke-width: 2; }
+      .bob-tx { fill: #90EE90; stroke: #006400; }
+      .alice-tx { fill: #FFB6C1; stroke: #8B0000; }
+      .arrow { stroke-width: 2; marker-end: url(#arrowhead); fill: none; }
+    </style>
+
+    <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7"/>
+        </marker>
+    </defs>
+
+    <!-- Step 1: Bob's initial transaction -->
+    <g transform="translate(100,50)">
+        <rect x="0" y="0" width="150" height="100" rx="5" class="bob-tx"/>
+        <text x="75" y="30" text-anchor="middle" class="title">Step 1: Bob</text>
+        <text x="75" y="50" text-anchor="middle" class="label">Sponsored TX</text>
+        <text x="75" y="65" text-anchor="middle" class="small">User nonce: 100</text>
+        <text x="75" y="75" text-anchor="middle" class="small">Sponsor nonce: 1</text>
+        <text x="75" y="85" text-anchor="middle" class="small">Fee: 1000 STX</text>
+    </g>
+
+    <!-- Step 2: Alice's replacement -->
+    <g transform="translate(300,50)">
+        <rect x="0" y="0" width="150" height="100" rx="5" class="alice-tx"/>
+        <text x="75" y="30" text-anchor="middle" class="title">Step 2: Alice</text>
+        <text x="75" y="50" text-anchor="middle" class="label">Normal TX</text>
+        <text x="75" y="70" text-anchor="middle" class="small">Nonce: 100</text>
+        <text x="75" y="85" text-anchor="middle" class="small">Fee: 1000.1 STX</text>
+    </g>
+
+
+    <!-- Step 3a: Bob's counter -->
+    <g transform="translate(500,50)">
+        <rect x="0" y="0" width="150" height="100" rx="5" class="bob-tx"/>
+        <text x="75" y="30" text-anchor="middle" class="title">Step 3: Bob</text>
+        <text x="75" y="50" text-anchor="middle" class="label">Sponsored TX</text>
+        <text x="75" y="65" text-anchor="middle" class="small">User nonce: 100</text>
+        <text x="75" y="75" text-anchor="middle" class="small">Sponsor nonce: 1</text>
+        <text x="75" y="85" text-anchor="middle" class="small">Fee: 1001 STX</text>
+    </g>
+
+
+    <!-- Step 3b: Confirmation -->
+    <g transform="translate(500,200)">
+        <rect x="0" y="0" width="150" height="100" rx="5" fill="#f0f0f0" stroke="#000"/>
+        <text x="75" y="30" text-anchor="middle" class="title">Step 3b: Confirmed</text>
+        <text x="75" y="50" text-anchor="middle" class="label">Normal TX</text>
+        <text x="75" y="70" text-anchor="middle" class="small">Fees paid</text>
+        <rect x="10" y="78" width="130" height="10" fill="#FFB6C1"/>
+        <text x="75" y="85" text-anchor="middle" class="small">Costs 1001 STX extra</text>
+    </g>
+
+    <!-- Step 4: Expiry -->
+    <g transform="translate(700,50)">
+        <rect x="0" y="0" width="150" height="100" rx="5" fill="#f0f0f0" stroke="#000"/>
+        <text x="75" y="30" text-anchor="middle" class="title">Step 4: Expiry</text>
+        <text x="75" y="50" text-anchor="middle" class="label">After 256 tenures</text>
+        <text x="75" y="70" text-anchor="middle" class="small">Fees returned to sponsor</text>
+        <rect x="10" y="78" width="130" height="10" fill="#90EE90"/>
+        <text x="75" y="85" text-anchor="middle" class="small">1001 STX back</text>
+    </g>
+
+    <!-- Replacement arrows -->
+    <g stroke="#666">
+        <path d="M250,100 L300,100" class="arrow"/>
+        <path d="M450,100 L500,100" class="arrow"/>
+        <path d="M650,100 L700,100" class="arrow"/>
+        <path d="M450,100 L500,250" class="arrow"/>
+    </g>
+
+    <!-- Mempool -->
+    <rect x="50" y="350" width="800" height="50" fill="#f8f8f8" stroke="#ddd"/>
+    <text x="450" y="380" text-anchor="middle" class="label">Mempool - Transactions competing with increasing fees</text>
+</svg>

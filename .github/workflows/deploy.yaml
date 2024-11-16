@@ -1,0 +1,45 @@
+name: Deploy Site
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "22"
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Install mkdocs
+        run: pip install mkdocs
+
+      - name: Build the site with pnpm
+        run: pnpm run build
+
+      - name: Build the site with mkdocs
+        run: |
+          cd mkdocs
+          mkdocs build
+          cd ..
+          rm -rf docs
+          cp -r mkdocs/site/ docs
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs

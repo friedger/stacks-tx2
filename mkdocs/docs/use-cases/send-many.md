@@ -6,7 +6,7 @@ When sending $NOT tokens users can choose to pay transactions fees in $NOT. (The
 
 ## sendstx.com
 
-![Send Nothing](img/send-many-not.png)
+![Send Nothing](../img/send-many-not.png)
 
 ## Explanation
 
