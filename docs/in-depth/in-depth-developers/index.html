@@ -4,21 +4,21 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="shortcut icon" href="../img/favicon.ico" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
     <title>In-Depth: Sponsored Transactions for Developers - TX2 docs</title>
-    <link rel="stylesheet" href="../css/theme.css" />
-    <link rel="stylesheet" href="../css/theme_extra.css" />
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
         var mkdocs_page_name = "In-Depth: Sponsored Transactions for Developers";
-        var mkdocs_page_input_path = "in-depth-developers.md";
+        var mkdocs_page_input_path = "in-depth/in-depth-developers.md";
         var mkdocs_page_url = null;
       </script>
     
     <!--[if lt IE 9]>
-      <script src="../js/html5shiv.min.js"></script>
+      <script src="../../js/html5shiv.min.js"></script>
     <![endif]-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
       <script>hljs.highlightAll();</script> 
@@ -30,9 +30,9 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href=".." class="icon icon-home"> TX2 docs
+          <a href="../.." class="icon icon-home"> TX2 docs
         </a><div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
   </form>
 </div>
@@ -40,34 +40,51 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="..">Sponsored Stacks transactions</a>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Sponsored Stacks transactions</a>
                 </li>
               </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../block/">Block hacked account</a>
-                </li>
-              </ul>
+              <p class="caption"><span class="caption-text">In-Depth</span></p>
               <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="#">In-Depth: Sponsored Transactions for Developers</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../in-depth-users/">In-Depth: Sponsored Transactions for Users</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">In-Depth: Sponsored Transactions for Developers</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#signing-transaction-by-user">Signing Transaction by User</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#signing-transaction-by-sponsor">Signing Transaction by Sponsor</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#webservices-for-sponsoring-transactions">Webservices for Sponsoring Transactions</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#api-reference">API Reference</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#sponsor">sponsor</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#info">info</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
     </ul>
-                </li>
+                  </li>
               </ul>
+              <p class="caption"><span class="caption-text">Use Cases</span></p>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../in-depth-users/">In-Depth: Sponsored Transactions for Users</a>
-                </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../use-cases/send-many/">Send $NOTHING to many users</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../use-cases/minting-nfts/">Minting NFTs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../use-cases/transferring-nfts/">Transferring NFTs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../use-cases/block/">Block hacked account</a>
+                  </li>
               </ul>
+              <p class="caption"><span class="caption-text">Vision</span></p>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../minting-nfts/">Minting NFTs</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../send-many/">Send $NOTHING to many users</a>
-                </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../vision/sbtc/">Paying Transaction fees in BTC and sBTC</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../vision/transaction-bundles/">Transaction Bundles</a>
+                  </li>
               </ul>
       </div>
     </div>
@@ -76,13 +93,14 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="..">TX2 docs</a>
+          <a href="../..">TX2 docs</a>
         
       </nav>
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">In-Depth</li>
       <li class="breadcrumb-item active">In-Depth: Sponsored Transactions for Developers</li>
     <li class="wy-breadcrumbs-aside">
     </li>
@@ -130,12 +148,47 @@ const sponsoredTx = await sponsorTransaction({
 
 const result = await broadcastTransaction(sponsoredTx);
 </code></pre>
+<h2 id="webservices-for-sponsoring-transactions">Webservices for Sponsoring Transactions</h2>
+<p>As mentioned above the transaction signing by sponsor usually happens on a server that holds the private key of the sponsor. There are two open source projects that implemented such a webservice that provide both the same API:</p>
+<ul>
+<li><a href="https://github.com/friedger/stacks-not-sponsoring/">Tx2 service</a>: basic service that allows to sponsor send-many calls for $NOTHING, uses single sponsoring address.</li>
+<li><a href="https://github.com/secretkeylabs/stacks-transaction-sponsor/">Xverse service</a>: advanced service that allows to sponsor nft transfers, uses a randomly selected address from a list of sponsoring addresses.</li>
+</ul>
+<h3 id="api-reference">API Reference</h3>
+<h4 id="sponsor">sponsor</h4>
+<p><code>/v1/sponsor</code> (POST)</p>
+<p>The request body contains the user signed transaction as json property <code>tx</code>. The transaction must be created as a sponsored transaction. The service will sign the transaction as the sponsor and broadcast it.</p>
+<h5 id="example">Example</h5>
+<p>Request:</p>
+<pre><code>curl -X POST http://localhost:3000/v1/sponsor \
+ -H &quot;Content-Type: application/json&quot; \
+ -d '{&quot;tx&quot;: &quot;feedc00d1...user-signed-transaction-hex&quot;}'
+</code></pre>
+<p>Result:</p>
+<pre><code class="language-json">{
+  &quot;txid&quot;: &quot;c001c0de...tx-id&quot;,
+  &quot;rawTx&quot;: &quot;feedc00d2...sponsored-transaction-hex&quot;
+}
+</code></pre>
+<h4 id="info">info</h4>
+<p><code>/v1/info</code> (GET)</p>
+<p>The request returns information about the service in JSON. The result is a list of addresses used by the service for sponsoring transactions.</p>
+<p>For tx2, the result contains also the minimum fees for NOT sponsoring and the balance of the sponsor.</p>
+<h5 id="example_1">Example</h5>
+<pre><code>curl -X GET http://localhost:3000/v1/info'
+</code></pre>
+<p>Result:</p>
+<pre><code class="language-json">{
+  &quot;active&quot;: &quot;true&quot;,
+  &quot;sponsor_addresses&quot;: [&quot;SP1234...&quot;, &quot;SP5678...&quot;]
+}
+</code></pre>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../block/" class="btn btn-neutral float-left" title="Block hacked account"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../in-depth-users/" class="btn btn-neutral float-right" title="In-Depth: Sponsored Transactions for Users">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../in-depth-users/" class="btn btn-neutral float-left" title="In-Depth: Sponsored Transactions for Users"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../use-cases/send-many/" class="btn btn-neutral float-right" title="Send $NOTHING to many users">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -158,18 +211,18 @@ const result = await broadcastTransaction(sponsoredTx);
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../block/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../in-depth-users/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../in-depth-users/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../../use-cases/send-many/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
-    <script src="../js/jquery-3.6.0.min.js"></script>
-    <script>var base_url = "..";</script>
-    <script src="../js/theme_extra.js"></script>
-    <script src="../js/theme.js"></script>
-      <script src="../search/main.js"></script>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
     <script>
         jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);

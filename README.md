@@ -7,6 +7,6 @@
 3. cd mkdocs
 4. mkdocs build
 5. cd ..
-6. rm docs
-7. cp mkdocs/site/ docs
+6. rm -r docs
+7. cp -r mkdocs/site/ docs
 8.
