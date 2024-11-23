@@ -12,9 +12,9 @@ When sending $NOT tokens users can choose to pay transactions fees in $NOT. (The
 
 When the user chooses to pay in $NOT the sponsor address is added as a recipient of the send-many transaction. The amount is currently fixed and should be equivalent to the transactions fees in STX.
 
-The transaction is signed by the user as a sponsored transaction using Leather wallet (or other supported wallets). The returned signed transaction is send to the tx2.app server. The server verifies the transactions. If the transaction is eligable for sponsoring, the server account signs the transaction as sponsor with the keys of the sponsor address and then broadcasts the transaction.
+The transaction is signed by the user as a sponsored transaction using Leather wallet (or other supported wallets). The returned signed transaction is send to the tx2.app server. The server verifies the transactions. If the transaction is eligible for sponsoring, the server account signs the transaction as sponsor with the keys of the sponsor address and then broadcasts the transaction.
 
-The following criteria are implemented for eligable sponsoring:
+The following criteria are implemented for eligible sponsoring:
 
 - must be a sponsored transaction
 - must be a send-many transaction for $NOT

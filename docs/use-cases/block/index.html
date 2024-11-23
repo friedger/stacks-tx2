@@ -96,7 +96,7 @@
               
                 <h1 id="block-hacked-account">Block hacked account</h1>
 <p>Sponsored transactions have been seen in the wild to block a hacked account from doing any further transactions. This is possible due to the dependency between user and sponsor.</p>
-<p>When a third party (Alice) has access to the private key of the user's account, the user (Bob) can try to block their own account. The user can initiate a sponsored transaction with the sponsoring account using a nonce with a gap and. This prevents that the user's sponsored transaction is confirmed by the network. The user account cannot send any transactions anymore.</p>
+<p>When a third party (Alice) has access to the private key of the user's account, the user (Bob) can try to block their own account. The user can initiate a sponsored transaction with the sponsoring account using a nonce with a gap. This prevents that the user's sponsored transaction is confirmed by the network. The user account cannot send any transactions anymore.</p>
 <p>The third party could try to replace the transaction by higher fees. However, the sponsor can do the same. If the user uses a very high fee e.g. 1000x more than usual then it is very expensive for the 3rd party to submit a bad transaction because the 3rd party has to increase the fees even more. For the user the risk is smaller because the sponsor can get back their fees when the transaction in mempool expires after 256 tenures/bitcoin blocks (around 2 days).</p>
 <p>Example:</p>
 <ol>
